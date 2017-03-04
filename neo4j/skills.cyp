@@ -7,10 +7,11 @@ CREATE  (LinuxMagazine:WebSite {name:"Linux Magazine", description:"Linux Founda
 
 
 CREATE 
-    Linux()-[:DEVELOP_AT {develop:"online"}]->(LinuxVoice),
+    (Linux)-[:DEVELOP_AT {develop:"online"}]->(LinuxVoice),
     (Linux)-[:DEVELOP_AT {develop:"online"}]->(LinuxMagazine)
 
-
 # DELETE
+MATCH (n) DETACH DELETE n 
+
 
 # Some useful queries
